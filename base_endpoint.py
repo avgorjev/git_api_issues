@@ -4,7 +4,7 @@ import allure
 owner = "avgorjev"
 repo = "rest_issues"
 url = f"https://api.github.com/repos/{owner}/{repo}/issues"
-token = "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"
+token = "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"
 payload = {
       "title": "Issue 1",
       "body": "Я нашел баг",
