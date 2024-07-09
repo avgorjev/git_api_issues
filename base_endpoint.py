@@ -4,7 +4,7 @@ import allure
 owner = "avgorjev"
 repo = "rest_issues"
 url = f"https://api.github.com/repos/{owner}/{repo}/issues"
-toke = "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"
+token = "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"
 payload = {
       "title": "Issue 1",
       "body": "Я нашел баг",
@@ -17,7 +17,7 @@ payload = {
 }
 headers = {
       'Accept': 'application/vnd.github+json',
-      'Authorization': f'Bearer {toke}',
+      'Authorization': f'Bearer {token}',
       'X-GitHub-Api-Version': '2022-11-28',
       'Content-Type': 'application/json',
       'Cookie': '_octo=GH1.1.809836981.1720270408; logged_in=no'
