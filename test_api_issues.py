@@ -1,8 +1,8 @@
-from endpoints.base_endpoint import Asserts, payload
-from endpoints.get_endpoint import GettingIssue
-from endpoints.patch_endpoint import UpdatingIssue, payload_patch
-from endpoints.put_endpoint import LockingIssue
-from endpoints.post_endpoint import CreatingIssue
+from base_endpoint import Asserts, payload
+from get_endpoint import GettingIssue
+from patch_endpoint import UpdatingIssue, payload_patch
+from put_endpoint import LockingIssue
+from post_endpoint import CreatingIssue
 import allure
 
 
