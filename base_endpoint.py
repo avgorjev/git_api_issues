@@ -17,7 +17,7 @@ payload = {
 }
 headers = {
       'Accept': 'application/vnd.github+json',
-      'Authorization': f'Bearer {token}',
+      'Authorization': f'Bearer ${{ secrets.GITHUB_TOKEN }}',
       'X-GitHub-Api-Version': '2022-11-28',
       'Content-Type': 'application/json',
       'Cookie': '_octo=GH1.1.809836981.1720270408; logged_in=no'
