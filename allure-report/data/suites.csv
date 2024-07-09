@@ -1,0 +1,14 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jul 09 14:50:28 AMT 2024","Tue Jul 09 14:50:29 AMT 2024","713","","test_api_issues","","","","test_lock_issue","
+    Switching the issue to completed status due to resolved
+    "
+"passed","Tue Jul 09 14:50:27 AMT 2024","Tue Jul 09 14:50:27 AMT 2024","395","","test_api_issues","","","","test_get_issue",""
+"passed","Tue Jul 09 14:50:25 AMT 2024","Tue Jul 09 14:50:27 AMT 2024","1740","","test_api_issues","","","","test_check_list_issue","
+    The created issue is in the list
+    "
+"passed","Tue Jul 09 14:50:24 AMT 2024","Tue Jul 09 14:50:25 AMT 2024","1221","","test_api_issues","","","","test_create_issue","
+    The issue was successfully generated
+    "
+"passed","Tue Jul 09 14:50:27 AMT 2024","Tue Jul 09 14:50:28 AMT 2024","817","","test_api_issues","","","","test_update_issue","
+    Changing the contents of the body field
+    "

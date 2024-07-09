@@ -1,0 +1,6 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","PUT","Lock an issue","0","0","1","0","0"
+"","GET","Get an issue","0","0","1","0","0"
+"","GET","List repository issues","0","0","1","0","0"
+"","POST","Create an issue","0","0","1","0","0"
+"","PATCH","Update an issue","0","0","1","0","0"
