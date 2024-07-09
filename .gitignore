@@ -1,2 +1,4 @@
 .venv/
 .idea/
+allure-report
+reports
