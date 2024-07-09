@@ -2,11 +2,24 @@ name:
   Tests for REST API endpoints for issues
 
 on:
-  push
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: Choose tests
+        required: true
+        default:
+          type: choice
+          options:
+            - first_test
+            - second_test
+            - third_test
+            - forth_test
+            - fifth_test
+
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout repository
@@ -17,6 +30,18 @@ jobs:
           python-version: "3.11"
       - name: Install requirements
         run: pip install -r requirements.txt
-      - name: Run test
-        run: pytest
-
+      - name: first_test
+        run: pytest test_api_issues.py::test_create_issue
+        if: "github.event.inputs.deployment_target == 'first_test'"
+      - name: secont_test
+        if: "github.event.inputs.deployment_target == 'second_test'"
+        run: pytest test_api_issues.py::test_check_list_issue
+      - name: third_test
+        if: "github.event.inputs.deployment_target == 'third_test'"
+        run: pytest test_api_issues.py::test_get_issue
+      - name: forth_test
+        if: "github.event.inputs.deployment_target == 'forth_test'"
+        run: pytest test_api_issues.py::test_update_issue
+      - name: fifth_test
+        if: "github.event.inputs.deployment_target == 'fifth_test'"
+        run: pytest test_api_issues.py::test_lock_issue
