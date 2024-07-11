@@ -4,6 +4,7 @@ import yaml
 with open(".github/workflows/run_api_tests.yml", "r") as file:
     data = yaml.safe_load(file)
 
+#print(data['jobs']['test']['steps'][3]['env']['GH_TOKEN'])
 
 owner = "avgorjev"
 repo = "rest_issues"
@@ -22,7 +23,7 @@ payload = {
 }
 headers = {
       'Accept': 'application/vnd.github+json',
-      'Authorization': f'Bearer {token}',
+      'Authorization': 'Bearer ${{ secrets.GITHUB_TOKEN }}',
       'X-GitHub-Api-Version': '2022-11-28',
       'Content-Type': 'application/json',
       'Cookie': '_octo=GH1.1.809836981.1720270408; logged_in=no'
