@@ -10,7 +10,7 @@ owner = "avgorjev"
 repo = "rest_issues"
 url = f"https://api.github.com/repos/{owner}/{repo}/issues"
 #token = "data['jobs']['test']['steps'][3]['env']['GH_TOKEN']"
-token = "github.token"
+#token = "github.token"
 payload = {
       "title": "Issue 1",
       "body": "Я нашел баг",
