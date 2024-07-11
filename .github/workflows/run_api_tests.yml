@@ -23,7 +23,7 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Run tests
-        run: pytest --alluredir reports
+        run: pytest test_api_issues.py ${{ secrets.GITHUB_TOKEN }}
       - name: Save results
         uses: actions/upload-artifact@v3
         with: 
