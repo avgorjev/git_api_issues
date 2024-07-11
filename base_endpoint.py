@@ -1,10 +1,14 @@
 import allure
+import yaml
+
+with open(".github/workflows/run_api_tests.yml", "r") as file:
+    data = yaml.safe_load(file)
 
 
 owner = "avgorjev"
 repo = "rest_issues"
 url = f"https://api.github.com/repos/{owner}/{repo}/issues"
-token = "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"
+token = "data['env']['GH_TOKEN']"
 payload = {
       "title": "Issue 1",
       "body": "Я нашел баг",

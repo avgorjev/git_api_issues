@@ -4,6 +4,9 @@ name:
 on:
   push
 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 permissions:
   contents: read
   pages: write
@@ -24,8 +27,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest --alluredir reports
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
       - name: Save results
         uses: actions/upload-artifact@v3
         with: 
