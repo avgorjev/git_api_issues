@@ -4,6 +4,9 @@ name:
 on:
   push
 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 permissions:
   contents: read
   pages: write
