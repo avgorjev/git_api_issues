@@ -1,5 +1,8 @@
 import allure
 import yaml
+import os
+
+token = os.getenv('GITHUB_TOKEN')
 
 with open(".github/workflows/run_api_tests.yml", "r") as file:
     data = yaml.safe_load(file)
@@ -20,7 +23,7 @@ payload = {
 }
 headers = {
       'Accept': 'application/vnd.github+json',
-      'Authorization': 'Bearer ${{ secrets.GITHUB_TOKEN }}',
+      'Authorization': 'Bearer {token}',
       'X-GitHub-Api-Version': '2022-11-28',
       'Content-Type': 'application/json',
       'Cookie': '_octo=GH1.1.809836981.1720270408; logged_in=yes'
