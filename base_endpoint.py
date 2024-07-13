@@ -2,7 +2,7 @@ import allure
 import yaml
 import os
 
-token = os.getenv('GITHUB_TOKEN')
+token = os.getenv('GH_TOKEN')
 
 with open(".github/workflows/run_api_tests.yml", "r") as file:
     data = yaml.safe_load(file)
