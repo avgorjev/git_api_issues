@@ -25,7 +25,6 @@ headers = {
       'Cookie': '_octo=GH1.1.809836981.1720270408; logged_in=yes'
 }
 
-print(requests.request("POST", url, headers=headers, json=payload).json())
 
 class Asserts:
 
