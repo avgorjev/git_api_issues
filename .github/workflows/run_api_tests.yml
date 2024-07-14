@@ -5,7 +5,7 @@ on:
   push
 
 env:
-  github_token: ${{ secrets.GITHUB_TOKEN }}
+  github_token: ${{ secrets.API_TOKEN }}
 
 permissions:
   contents: read
