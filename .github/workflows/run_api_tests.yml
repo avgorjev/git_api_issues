@@ -38,7 +38,7 @@ jobs:
   prepare_reports:
 
     runs-on: macos-latest
-    needs: api_tests
+    needs: test
     name: creating_report
 
     steps:
