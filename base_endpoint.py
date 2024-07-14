@@ -1,6 +1,5 @@
 import allure
 import os
-import requests
 
 
 GITHUB_TOKEN = os.environ['github_token']

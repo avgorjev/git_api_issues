@@ -1,5 +1,5 @@
 from base_endpoint import Asserts, payload
-from get_endpoint import GettingIssue
+from get_endpoint import ListingIssue, GettingIssue, url_id
 from patch_endpoint import UpdatingIssue, payload_patch
 from put_endpoint import LockingIssue
 from post_endpoint import CreatingIssue
@@ -7,6 +7,7 @@ import allure
 
 
 post_issue = CreatingIssue()
+list_issue = ListingIssue()
 get_issue = GettingIssue()
 patch_issue = UpdatingIssue()
 put_issue = LockingIssue()
@@ -33,13 +34,13 @@ def test_check_list_issue():
     '''
     The created issue is in the list
     '''
-    asserts.check_issue_numbers(post_issue.number_issue(), get_issue.list_created_issues().json()[0]['number'])
+    asserts.check_issue_numbers(post_issue.number_issue(), list_issue.list_created_issues().json()[0]['number'])
 
 
 @allure.story('Get an issue')
 @allure.feature('GET')
 def test_get_issue():
-    response = get_issue.check_issue
+    response = get_issue.check_issue(url_id)
     asserts.check_status_is_200(response)
 
 
