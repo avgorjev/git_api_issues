@@ -1,12 +1,9 @@
 from base_endpoint import url, headers
-#from post_endpoint import CreatingIssue
 import requests
 import allure
 
 
 payload_get = {}
-#url_id = f"{url}/{CreatingIssue().number_issue()}"
-
 
 class ListingIssue:
 
@@ -24,4 +21,4 @@ class GettingIssue:
         return self.response
 
 
-url_id = f"{url}/{ListingIssue().list_created_issues().json()['number']}"
+url_id = f"{url}/{ListingIssue().list_created_issues().json()[0]['number']}"
