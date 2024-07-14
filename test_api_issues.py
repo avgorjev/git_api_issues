@@ -61,5 +61,5 @@ def test_lock_issue():
     '''
     Switching the issue to completed status due to resolved
     '''
-    response = put_issue.lock_issue
+    response = put_issue.lock_issue()
     asserts.check_status_is_204(response)
