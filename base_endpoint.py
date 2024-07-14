@@ -5,7 +5,7 @@ import requests
 
 GITHUB_TOKEN = os.environ['github_token']
 owner = "avgorjev"
-repo = "rest_issues"
+repo = "git_api_issues"
 url = f"https://api.github.com/repos/{owner}/{repo}/issues"
 payload = {
       "title": "Issue 1",
