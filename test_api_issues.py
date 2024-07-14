@@ -39,7 +39,8 @@ def test_check_list_issue():
 @allure.story('Get an issue')
 @allure.feature('GET')
 def test_get_issue():
-    asserts.check_status_is_200(get_issue.check_issue())
+    response = get_issue.check_issue
+    asserts.check_status_is_200(response)
 
 
 @allure.story('Update an issue')
@@ -59,4 +60,5 @@ def test_lock_issue():
     '''
     Switching the issue to completed status due to resolved
     '''
-    asserts.check_status_is_204(put_issue.lock_issue())
+    response = put_issue.lock_issue
+    asserts.check_status_is_204(response)
