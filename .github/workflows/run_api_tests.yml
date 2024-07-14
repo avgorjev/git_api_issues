@@ -2,7 +2,7 @@ name:
   Tests for REST API endpoints for issues
 
 on:
-  push
+  workflow_dispatch
 
 env:
   github_token: ${{ secrets.API_TOKEN }}
